@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 app = Flask(__name__)
 print(os.getenv("system"))
+
 
 @app.route("/", methods = ['Get', 'Post'])
 def home():
@@ -22,4 +22,9 @@ def require_auth(f):
 @require_auth
 def secure_area():
     return "This is a secure area." * 2
+
+
+@app.route('/test')
+def test():
+    return "test"
 

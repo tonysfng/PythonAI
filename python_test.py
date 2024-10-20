@@ -1,3 +1,3 @@
 import random
 
-print(random.randrange(1, 20))
+print(random.randrange(1, 30))
